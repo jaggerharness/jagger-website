@@ -12,38 +12,16 @@ function App() {
           Welcome to my website
         </p>
         <p className="text-xl text-ws-light-gray hover:text-ws-lime-green text-center font-bold font-mono mt-3">
-          // I'm Jagger
+          // Jagger Harness
         </p>
         <p className="text-xl text-ws-light-gray hover:text-ws-lime-green text-center font-bold font-mono">
           // Software Engineer
         </p>
-        <p className="text-xl text-ws-light-gray hover:text-ws-lime-green text-center font-bold font-mono">
-          // Gamer
-        </p>
+        <button class="text-xl text-center font-bold font-mono text-ws-light-gray hover:text-ws-lime-green hover:line-through transition duration-150 ease-in-out"
+          data-bs-toggle="tooltip" title="I wish">// Professional Gamer</button>
       </header>
     </div>
   );
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <h1 className="text-3xl font-bold underline">
-  //         Hello world!
-  //       </h1>
-  //       <p>
-  //         Edit <code>src/App.js</code> and save to reload.
-  //       </p>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
 }
 
 export default App;
