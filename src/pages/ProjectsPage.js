@@ -4,7 +4,7 @@ import Project from "../components/Project.js";
 
 const ProjectsPage = (props) => {
   const [connection, setConnection] = useState("Failed");
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState();
 
   useEffect(() => {
     const url = "http://localhost:8080/connection";
@@ -23,8 +23,7 @@ const ProjectsPage = (props) => {
     const fetchProjects = async () => {
       try {
         const response = await fetch(url2);
-        const data = await response.json().then(element => setProjects(element.projects));
-        // setProjects(data);
+        await response.json().then(element => setProjects(element.projects));
       } catch (error) {
         console.log("error", error);
       }
@@ -55,9 +54,9 @@ const ProjectsPage = (props) => {
         <div className="text-4xl text-white align-top pl-2 pt-2 w-fit font-bold font-mono">
           Projects (just for fun)
         </div>
-        {projects.map(project => {
+        {projects ? projects.map(project => {
           return <Project data={project} />
-        })}
+        }) : <p className="text-white animate-pulse pl-2 pt-2">Loading projects...</p>}
       </div>
     </div>
   );
