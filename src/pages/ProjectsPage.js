@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Project from "../components/Project.js";
 
 const ProjectsPage = (props) => {
   const [connection, setConnection] = useState("Failed");
@@ -40,6 +41,9 @@ const ProjectsPage = (props) => {
       <div className="flex flex-col min-h-screen">
         <div className="text-4xl text-white align-top pl-2 pt-2 w-fit font-bold font-mono">
           Projects (just for fun)
+        </div>
+        <div className="pt-5">
+            <Project />
         </div>
       </div>
     </div>
