@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const HomePage = (props) => {
-  const [count, setCount] = useState(0);
   const [connection, setConnection] = useState("Failed");
 
   useEffect(() => {
@@ -39,14 +39,12 @@ const HomePage = (props) => {
         <div className="text-5xl text-white align-middle pb-5 w-fit font-bold font-mono hover:animate-pulse">
           I'm Jagger Harness
         </div>
-        <div>
-          <button
-            onClick={() => setCount(count + 1, console.log(count))}
-            className="bg-ws-green hover:bg-ws-lime-green text-white font-bold py-2 px-4 rounded"
-          >
-            Projects
-          </button>
-        </div>
+        <Link
+          to="/projects"
+          className="bg-ws-green hover:bg-ws-lime-green text-white font-bold py-2 px-4 rounded"
+        >
+          Projects
+        </Link>
       </div>
     </div>
   );
