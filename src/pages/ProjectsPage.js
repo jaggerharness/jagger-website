@@ -45,6 +45,18 @@ const ProjectsPage = (props) => {
         <div className="pt-5">
             <Project />
         </div>
+        <div className="pt-5">
+            <Project />
+        </div>
+        <div className="pt-5">
+            <Project />
+        </div>
+        <div className="pt-5">
+            <Project />
+        </div>
+        <div className="pt-5 pb-5">
+            <Project />
+        </div>
       </div>
     </div>
   );
