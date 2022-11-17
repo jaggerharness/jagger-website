@@ -1,9 +1,8 @@
 import React from "react";
 
 const Project = (props) => {
-  console.log('ok');
   return (
-    <div class="px-5 ml-2 flex mr-auto mt-5 p-2 w-1/2 rounded-xl bg-gradient-to-r from-ws-lime-green to-blue-400 hover:from-pink-500 hover:to-yellow-500">
+    <div class="px-5 ml-2 flex mr-auto mt-5 p-2 w-1/2 rounded-xl bg-gradient-to-r from-ws-lime-green to-blue-500 hover:from-pink-500 hover:to-yellow-500">
       <div class="text-center my-auto text-black border-r-2 px-8">
           Project
           <br />

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import LoadingProject from "../components/LoadingProject.js";
 import Project from "../components/Project.js";
 
 const ProjectsPage = (props) => {
@@ -56,7 +57,7 @@ const ProjectsPage = (props) => {
         </div>
         {projects ? projects.map(project => {
           return <Project data={project} />
-        }) : <p className="text-white animate-pulse pl-2 pt-2">Loading projects...</p>}
+        }) : <LoadingProject />}
       </div>
     </div>
   );
