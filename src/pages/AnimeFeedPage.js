@@ -9,7 +9,7 @@ const AnimeFeedPage = (props) => {
 
   useEffect(() => {
     const url = "http://localhost:8080/connection";
-    const feed_url = "http://localhost:8080/fetchFeed"
+    const feed_url = "http://localhost:8080/fetchFeed";
 
     const checkAPIConnection = async () => {
       try {
@@ -24,7 +24,7 @@ const AnimeFeedPage = (props) => {
     const fetchFeed = async () => {
       try {
         const response = await fetch(feed_url);
-        await response.json().then(element => setFeed(element.feed));
+        await response.json().then((element) => setFeed(element.feed));
       } catch (error) {
         console.log("error", error);
       }
@@ -55,9 +55,15 @@ const AnimeFeedPage = (props) => {
         <div className="text-4xl text-white align-top pl-2 pt-2 w-fit font-bold font-mono">
           Anime Quote Feed
         </div>
-        {feed ? feed.map(entry => {
-          return <FeedCard key={entry.id} data={entry} />
-        }) : <LoadingProject />}
+        <div className="flex justify-center pt-5 flex-wrap">
+          {feed ? (
+            feed.map((entry) => {
+              return <FeedCard key={entry.id} data={entry} />;
+            })
+          ) : (
+            <LoadingProject />
+          )}
+        </div>
       </div>
     </div>
   );
