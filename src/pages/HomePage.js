@@ -41,7 +41,7 @@ const HomePage = (props) => {
         </div>
         <Link
           to="/projects"
-          className="bg-ws-green hover:bg-ws-lime-green text-white font-bold py-2 px-4 rounded"
+          className="bg-ws-green hover:bg-ws-lime-green hover:ring-0 ring-1 ring-ws-green text-white font-bold py-2 px-4 rounded"
         >
           Projects
         </Link>
