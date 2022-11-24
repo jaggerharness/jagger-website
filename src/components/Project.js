@@ -5,8 +5,6 @@ const Project = (props) => {
     <a
       href={`/projects${props.data.project_link}`}
       className="px-5 ml-2 flex mr-auto mt-5 p-2 w-1/2 rounded-xl bg-gradient-to-br from-ws-green to-blue-500 hover:from-ws-lime-green hover:to-blue-400"
-
-      // className="px-5 ml-2 flex mr-auto mt-5 p-2 w-1/2 rounded-xl bg-gradient-to-r from-ws-lime-green to-blue-500 hover:from-pink-500 hover:to-yellow-500"
     >
       <div className="p-4 flex flex-col justify-between leading-normal">
         <div className="pb-2">
