@@ -3,17 +3,9 @@ import React from "react";
 const Project = (props) => {
   return (
     <div class="px-5 ml-2 flex mr-auto mt-5 p-2 w-1/2 rounded-xl bg-gradient-to-r from-ws-lime-green to-blue-500 hover:from-pink-500 hover:to-yellow-500">
-      <div class="text-center my-auto text-black border-r-2 px-8">
-          Project
-          <br />
-          logo
-          <br />
-          here
-          <br />
-        </div>
       <div class="p-4 flex flex-col justify-between leading-normal">
-        <div class="mb-8">
-          <div class="text-gray-900 font-bold text-xl mb-2">
+        <div class="pb-2">
+          <div class="text-gray-900 font-bold text-2xl mb-2">
             {props.data.project_title}
           </div>
           <p class="text-gray-700 text-base">

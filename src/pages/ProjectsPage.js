@@ -9,7 +9,7 @@ const ProjectsPage = (props) => {
 
   useEffect(() => {
     const url = "http://localhost:8080/connection";
-    const url2 = "http://localhost:8080/fetchProjects"
+    const project_url = "http://localhost:8080/fetchProjects"
 
     const checkAPIConnection = async () => {
       try {
@@ -23,7 +23,7 @@ const ProjectsPage = (props) => {
 
     const fetchProjects = async () => {
       try {
-        const response = await fetch(url2);
+        const response = await fetch(project_url);
         await response.json().then(element => setProjects(element.projects));
       } catch (error) {
         console.log("error", error);
@@ -53,7 +53,7 @@ const ProjectsPage = (props) => {
       </div>
       <div className="flex flex-col min-h-screen">
         <div className="text-4xl text-white align-top pl-2 pt-2 w-fit font-bold font-mono">
-          Projects (just for fun)
+          Projects Playground
         </div>
         {projects ? projects.map(project => {
           return <Project data={project} />
