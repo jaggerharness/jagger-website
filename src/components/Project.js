@@ -2,7 +2,10 @@ import React from "react";
 
 const Project = (props) => {
   return (
-    <div class="px-5 ml-2 flex mr-auto mt-5 p-2 w-1/2 rounded-xl bg-gradient-to-r from-ws-lime-green to-blue-500 hover:from-pink-500 hover:to-yellow-500">
+    <a
+      href={`/projects${props.data.project_link}`}
+      class="px-5 ml-2 flex mr-auto mt-5 p-2 w-1/2 rounded-xl bg-gradient-to-r from-ws-lime-green to-blue-500 hover:from-pink-500 hover:to-yellow-500"
+    >
       <div class="p-4 flex flex-col justify-between leading-normal">
         <div class="pb-2">
           <div class="text-gray-900 font-bold text-2xl mb-2">
@@ -13,7 +16,7 @@ const Project = (props) => {
           </p>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
