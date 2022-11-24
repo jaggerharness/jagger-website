@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import LoadingProject from "../components/LoadingProject.js";
-import Project from "../components/Project.js";
+import FeedCard from "../components/FeedCard.js";
 
 const AnimeFeedPage = (props) => {
   const [connection, setConnection] = useState("Failed");
@@ -56,7 +56,7 @@ const AnimeFeedPage = (props) => {
           Anime Quote Feed
         </div>
         {feed ? feed.map(entry => {
-          return <Project data={entry} />
+          return <FeedCard key={entry.id} data={entry} />
         }) : <LoadingProject />}
       </div>
     </div>
