@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import LoadingProject from "../components/LoadingProject.js";
-import FeedCard from "../components/FeedCard.js";
+const FeedCard = React.lazy(() => import("../components/FeedCard.js"));
 
 const AnimeFeedPage = (props) => {
   const [connection, setConnection] = useState("Failed");
@@ -55,14 +55,14 @@ const AnimeFeedPage = (props) => {
         <div className="text-4xl text-white align-top pl-2 pt-2 w-fit font-bold font-mono">
           Anime Quote Feed
         </div>
-        <div className="flex justify-center pt-5 flex-wrap">
-          {feed ? (
-            feed.map((entry) => {
-              return <FeedCard key={entry.id} data={entry} />;
-            })
-          ) : (
-            <LoadingProject />
-          )}
+        <div className="flex justify-center py-5 flex-wrap">
+          <Suspense fallback={<span className="animate-pulse text-white">Loading...</span>}>
+            {feed
+              ? feed.map((entry) => {
+                  return <FeedCard key={entry.id} data={entry} />;
+                })
+              : ""}
+          </Suspense>
         </div>
       </div>
     </div>
