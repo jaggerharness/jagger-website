@@ -45,7 +45,7 @@ const AboutMePage = (props) => {
               <Tooltip
                 content={
                   quote
-                    ? "In fact, I actually haven't said this - ever. This is just a cool API I was messing around with that generates a somewhat 'techy' sounding phrase that may or may not make sense. Enjoy!"
+                    ? "I actually haven't said this - ever. This is just a cool API I was messing around with that generates a somewhat 'techy' sounding phrase that may or may not make sense. Enjoy!"
                     : "Looks like the API data was fetched incorrectly - I'm probably trying to fix it now"
                 }
                 style="light"
