@@ -22,18 +22,18 @@ const NavigationBar = () => {
 
   return (
     <div className="flex flex-row bg-ws-light-gray p-2">
-      <Link to="/" className="text-xl font-bold text-white font-mono pl-2">
+      <Link to="/" className={`${window.location.pathname === '/' ? 'underline' : ''} text-xl font-bold text-white font-mono pl-2 hover:underline decoration-ws-lime-green`}>
         Home
       </Link>
       <Link
         to="/about-me"
-        className="text-xl font-bold text-white font-mono pl-10"
+        className={`${window.location.pathname === '/about-me' ? 'underline' : ''} text-xl font-bold text-white font-mono pl-10 hover:underline decoration-ws-lime-green`}
       >
         About Me
       </Link>
       <Link
         to="/projects"
-        className="text-xl font-bold text-white font-mono pl-10"
+        className={`${window.location.pathname === '/projects' ? 'underline' : ''} text-xl font-bold text-white font-mono pl-10 hover:underline decoration-ws-lime-green`}
       >
         Playground
       </Link>
