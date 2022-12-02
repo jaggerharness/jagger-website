@@ -3,7 +3,7 @@ import React from "react";
 const FeedCard = (props) => {
   return (
     <div className="w-1/4 h-60 rounded-lg m-2 overflow-scroll scrollbar-hide shadow-lg bg-ws-dark-gray pb-8">
-      <div className="flex items-center justify-center px-2 font-bold text-xl mb-2 text-center h-20 bg-ws-green w-full">{`${props.data.character} - ${props.data.title}`}</div>
+      <div className="flex items-center justify-center px-2 font-bold text-xl mb-2 text-center h-20 bg-gradient-to-br from-ws-green to-ws-lime-green hover:bg-gradient-to-tr w-full">{`${props.data.character} - ${props.data.title}`}</div>
       <p className="text-gray-200 text-center px-2 pb-2">{props.data.quote}</p>
     </div>
   );
