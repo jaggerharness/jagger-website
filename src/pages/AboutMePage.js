@@ -28,7 +28,7 @@ const AboutMePage = (props) => {
         <div className="text-4xl text-white align-top pl-2 pt-2 w-fit font-bold font-mono">
           About Me
         </div>
-        <div className="bg-gradient-to-r from-ws-green to-ws-lime-green rounded-xl w-[99vw] ml-2 p-2 mt-5">
+        <div className="bg-gradient-to-r from-ws-green to-ws-lime-green rounded-xl w-[98vw] ml-2 p-2 mt-5">
           <div className="flex flex-col justify-between h-full border-ws-dark-gray border-2 bg-ws-light-gray text-gray-100 rounded-xl p-4">
             <p className="text-2xl underline">About</p>
             <p>
