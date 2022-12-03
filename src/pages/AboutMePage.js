@@ -25,13 +25,13 @@ const AboutMePage = (props) => {
     <div className="flex flex-col min-h-screen bg-ws-background bg-fixed">
       <NavigationBar />
       <div className="flex flex-col min-h-screen">
-        <div className="text-4xl text-white align-top pl-2 pt-2 w-fit font-bold font-mono">
+        <div className="text-4xl hidden md:block text-white align-top pl-2 pt-2 w-fit font-bold font-mono">
           About Me
         </div>
-        <div className="bg-gradient-to-r from-ws-green to-ws-lime-green rounded-xl w-[98vw] ml-2 p-2 mt-5">
+        <div className="bg-gradient-to-br from-ws-dark-green via-ws-green to-ws-lime-green rounded-xl w-11/12 mx-auto p-2 mt-5">
           <div className="flex flex-col justify-between h-full border-ws-dark-gray border-2 bg-ws-light-gray text-gray-100 rounded-xl p-4">
-            <p className="text-2xl underline">About</p>
-            <p>
+            <p className="text-2xl underline underline-offset-4">About</p>
+            <p className="mt-1">
               My name is Jagger Harness. I'm a full stack web and mobile
               software developer based out of Jonesboro, Arkansas. I'm a little
               bit interested in, well, everything. I have worked on a wide-range
@@ -48,7 +48,7 @@ const AboutMePage = (props) => {
                   content={
                     quote
                       ? "I actually haven't said this - ever. This is just a cool API I was messing around with that generates a somewhat 'techy' sounding phrase that may or may not make sense. Enjoy!"
-                      : "Looks like the API data was fetched incorrectly - I'm probably trying to fix it now"
+                      : "Guess I'm still trying to figure out what to say. I'm probably fixing this now."
                   }
                   style="light"
                   animation="duration-500"
@@ -56,7 +56,7 @@ const AboutMePage = (props) => {
                   <p
                     className={`${
                       quote
-                        ? "underline decoration-dotted"
+                        ? "underline decoration-dotted underline-offset-4"
                         : "animate-pulse bg-gray-300 text-gray-300"
                     }`}
                   >
@@ -66,8 +66,10 @@ const AboutMePage = (props) => {
               </p>
             </p>
             <div className="mt-4">
-              <div className="text-2xl underline">Interests</div>
-              <ul className="list-disc ml-4">
+              <div className="text-2xl underline underline-offset-4">
+                Interests
+              </div>
+              <ul className="list-disc ml-4 mt-1">
                 <li>React</li>
                 <li>Node</li>
                 <li>Flutter</li>
@@ -80,10 +82,14 @@ const AboutMePage = (props) => {
               </p>
             </div>
             <div className="mt-4">
-              <div className="text-2xl underline">Contact Me</div>
-              <a href="mailto:jaggerharness5@gmail.com">
-                I can be contacted via email at: jaggerharness5@gmail.com
-              </a>
+              <div className="text-2xl underline underline-offset-4">
+                Contact Me
+              </div>
+              <div className="mt-1">
+                <a href="mailto:jaggerharness5@gmail.com">
+                  I can be contacted via email at: jaggerharness5@gmail.com
+                </a>
+              </div>
             </div>
           </div>
         </div>

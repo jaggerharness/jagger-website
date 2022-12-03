@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'ws-dark-green': '#507227',
         'ws-green': '#61892F',
         'ws-lime-green': '#86C232',
         'ws-black': '#222629',
@@ -17,6 +18,13 @@ module.exports = {
       },
       backgroundImage: {
         'ws-background': "url('../public/images/ws-bg.jpg')",
+      },
+      backgroundPosition: {
+        'pos-0': '0% 0%',
+        'pos-100': '100% 100%',
+      },
+      backgroundSize: {
+        'size-200': '200% 200%',
       },
     },
   },

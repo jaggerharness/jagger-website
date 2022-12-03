@@ -25,7 +25,7 @@ const ProjectsPage = () => {
     <div className="flex flex-col min-h-screen bg-ws-background bg-fixed">
       <NavigationBar />
       <div className="flex flex-col min-h-screen">
-        <div className="text-4xl text-white align-top pl-2 pt-2 w-fit font-bold font-mono">
+        <div className="text-4xl mx-auto md:ml-0 md:mr-auto text-white text-center md:text-left align-top pl-2 pt-2 w-fit font-bold font-mono">
           Projects Playground
         </div>
         {projects ? projects.map(project => {
