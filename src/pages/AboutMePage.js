@@ -86,8 +86,8 @@ const AboutMePage = (props) => {
                 Contact Me
               </div>
               <div className="mt-1">
-                <a href="mailto:jaggerharness5@gmail.com">
-                  I can be contacted via email at: jaggerharness5@gmail.com
+                <a href="mailto:jagger.dev@gmail.com">
+                  I can be contacted via email at: jagger.dev@gmail.com
                 </a>
               </div>
             </div>
