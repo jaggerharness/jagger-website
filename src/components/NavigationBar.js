@@ -12,6 +12,7 @@ const NavigationBar = () => {
         const response = await fetch(url);
         const data = await response.json();
         setConnection(data);
+        console.log(connection);
       } catch (error) {
         console.log("error", error);
       }

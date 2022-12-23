@@ -1,18 +1,17 @@
 import React, { Suspense, useEffect, useState } from "react";
 import NavigationBar from "../components/NavigationBar";
-const FeedCard = React.lazy(() => import("../components/FeedCard.js"));
+const PokemonCard = React.lazy(() => import("../components/PokemonCard.js"));
 
 const PokemonPage = (props) => {
   const [pokemon, setPokemon] = useState();
 
   useEffect(() => {
-    const pokemon_url = "https://pokeapi.co/api/v2/pokemon";
+    const pokemon_url = "http://localhost:8080/fetchAllPokemon";
 
     const fetchPokemon = async () => {
       try {
         const response = await fetch(pokemon_url);
-        const data = await response.json().then(element => setPokemon(element.results));
-        // setPokemon(data.results);
+        await response.json().then((element) => setPokemon(element.data));
       } catch (error) {
         console.log("error", error);
       }
@@ -29,10 +28,14 @@ const PokemonPage = (props) => {
           Pokémon List
         </div>
         <div className="flex justify-center py-5 flex-wrap">
-          <Suspense fallback={<span className="animate-pulse text-white">Loading...</span>}>
+          <Suspense
+            fallback={
+              <span className="animate-pulse text-white">Loading...</span>
+            }
+          >
             {pokemon
               ? pokemon.map((entry) => {
-                  return <div className="text-gray-200 w-screen ml-2">{`entry.name: ${entry.name}`}</div>;
+                  return <PokemonCard key={entry.id} data={entry} />;
                 })
               : ""}
           </Suspense>
