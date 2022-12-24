@@ -27,7 +27,7 @@ const PokemonPage = (props) => {
         <div className="text-4xl mx-auto md:ml-0 md:mr-auto text-white md:pl-2 pt-2 w-fit font-bold font-mono">
           Pokémon List
         </div>
-        <div className="flex justify-center py-5 flex-wrap">
+        <div className="flex justify-center py-5 flex-wrap content-evenly">
           <Suspense
             fallback={
               <span className="animate-pulse text-white">Loading...</span>
