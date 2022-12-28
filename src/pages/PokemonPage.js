@@ -27,17 +27,27 @@ const PokemonPage = (props) => {
         <div className="text-4xl mx-auto md:ml-0 md:mr-auto text-white md:pl-2 pt-2 w-fit font-bold font-mono">
           Pokémon List
         </div>
-        <div className="flex justify-center py-5 flex-wrap content-evenly">
+        <div className="flex justify-center flex-wrap bg-[url('../public/images/ws-pokemon.jpeg')] content-evenly mx-2 mt-2 mb-8 border-4 rounded border-ws-dark-gray">
           <Suspense
             fallback={
               <span className="animate-pulse text-white">Loading...</span>
             }
           >
-            {pokemon
-              ? pokemon.map((entry) => {
-                  return <PokemonCard key={entry.id} data={entry} />;
-                })
-              : ""}
+            {pokemon ? (
+              pokemon.map((entry) => {
+                return <PokemonCard key={entry.id} data={entry} />;
+              })
+            ) : (
+              <div
+                className={`${
+                  pokemon
+                    ? "underline decoration-dotted underline-offset-4"
+                    : "animate-pulse text-gray-300"
+                }`}
+              >
+                Loading...
+              </div>
+            )}
           </Suspense>
         </div>
       </div>

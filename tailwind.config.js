@@ -26,6 +26,22 @@ module.exports = {
       backgroundSize: {
         'size-200': '200% 200%',
       },
+      animation: {
+        shake: 'shake 1s ease-in-out',
+      },
+      keyframes: {
+        shake: {
+          '0%, 100%': {
+            transform: 'rotate(0deg)',
+          },
+          '25%': {
+            transform: 'rotate(-2deg)',
+          },
+          '75%': {
+            transform: 'rotate(2deg)',
+          },
+        },
+      },
     },
   },
   plugins: [
